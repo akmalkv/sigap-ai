@@ -34,18 +34,18 @@ export default async function LoginPage(props: { searchParams: Promise<{ error?:
             <ShieldAlert className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Sigap AI</h1>
-          <p className="text-sm text-gray-500 font-medium">Masuk ke Dasbor Komando BNPB</p>
+          <p className="text-sm text-gray-500 font-medium">Masuk ke Dashboard</p>
         </div>
 
         <form action={login} className="space-y-6">
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1">Email Petugas</label>
+              <label className="block text-sm font-semibold text-gray-700 mb-1">Email</label>
               <input 
                 name="email" 
                 type="email" 
                 required 
-                placeholder="admin@bnpb.go.id"
+                placeholder="username@gmail.com"
                 className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-sigapBlue focus:border-sigapBlue outline-none transition-all bg-gray-50 focus:bg-white"
               />
             </div>

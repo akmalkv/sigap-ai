@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Map, ShieldAlert, Activity } from 'lucide-react'
+import { Map, ShieldAlert, Activity, Download, Apple } from 'lucide-react' 
 
 export default function PublicLandingPage() {
   return (
@@ -31,14 +31,30 @@ export default function PublicLandingPage() {
           </Link>
         </div>
 
-        <div className="pt-8 border-t border-gray-100">
-          <p className="text-sm text-gray-500 mb-4">Khusus Petugas & Relawan Terdaftar</p>
-          <Link href="/admin" className="inline-flex items-center justify-center px-6 py-3 bg-sigapBlue text-white font-bold rounded-xl hover:bg-sigapBlue-dark transition-shadow shadow-md shadow-sigapBlue/20">
-            Masuk ke Dasbor Admin
-          </Link>
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
+          
+            <Link href="/admin" className="inline-flex items-center justify-center px-6 py-3.5 bg-gray-100 text-gray-700 font-bold rounded-xl hover:bg-gray-200 transition-colors border border-gray-200 shadow-sm text-sm">
+              <ShieldAlert className="w-5 h-5 mr-2 text-gray-400" />
+              Masuk ke Dashboard
+            </Link>
+
+            <a 
+              href="https://jlrfsonuumlkeujyhzqr.supabase.co/storage/v1/object/public/app-releases/SigapAI.apk" 
+              download="sigapai.apk" 
+              className="inline-flex items-center justify-center px-6 py-3.5 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition-all shadow-md shadow-green-600/30 group"
+            >
+              <Download className="w-6 h-6 mr-3 group-hover:animate-bounce" />
+              <div className="text-left">
+                <span className="block font-bold text-lg leading-tight">Download APK</span>
+                <span className="block text-xs text-green-100 font-medium">Versi 1.0.0 (Offline AI Support)</span>
+              </div>
+              <div className="w-10 h-10 border-l border-green-500/50 pl-4 ml-4">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android" className="w-full h-full object-contain" />
+              </div>
+            </a>
+          </div>
       </div>
-      
+  
       <p className="mt-8 text-sm text-gray-400 font-medium z-10">
         &copy; 2026 Sigap AI - Indonesia
       </p>
