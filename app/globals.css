@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  /* Biru khas header/tombol aplikasi Android Anda */
+  --color-sigapBlue: #1976D2;
+  --color-sigapBlue-dark: #1565C0;
+  --color-sigapBlue-light: #42A5F5;
+  --color-sigapBlue-bg: #E3F2FD;
+
+  /* Warna klasifikasi kerusakan (Merah, Kuning/Orange, Hijau) */
+  --color-damage-berat: #D32F2F;
+  --color-damage-beratBg: #FFEBEE;
+  --color-damage-sedang: #F57C00;
+  --color-damage-sedangBg: #FFF3E0;
+  --color-damage-ringan: #388E3C;
+  --color-damage-ringanBg: #E8F5E9;
+
+  /* Warna latar belakang web */
+  --color-background: #F5F7FA;
+}
+
+/* Base styling biar bersih */
+body {
+  background-color: var(--color-background);
+  color: #1f2937; /* text-gray-800 */
+}
